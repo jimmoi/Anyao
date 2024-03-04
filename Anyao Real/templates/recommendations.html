@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        /* Navbar styles */
+        .navbar {
+            background-color: #343a40;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #66fcf1;
+        }
+        /* Recommendations styles */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .books {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .book {
+            margin: 20px;
+            width: 200px;
+        }
+        .book img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .book a {
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .book a:hover {
+            color: #66fcf1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</div>
+
+<div class="container">
+    <h1>Recommended Books</h1>
+    <div class="books">
+        {% for book in recommended_books %}
+        <div class="book">
+            <a href="{{ url_for('book_info', book_name=book) }}">
+                <img src="{{ callUrlFunction(book) }}" alt="{{ book }}">
+            </a>
+            <a href="{{ url_for('book_info', book_name=book) }}">{{ book }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

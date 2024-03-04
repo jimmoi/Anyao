@@ -1,0 +1,16 @@
+{
+    "username" : "Anyao",
+    "password" : "Anyao123",
+    "DB":{
+        "jimmy" :{
+            "host" : "localhost",
+            "port" : 1521,
+            "service_name" : "AnyaoTesT"
+        },
+        "jarnman":{
+            "host" : "10.199.36.10",
+            "port" : "1527",
+            "service_name" : "ORCLCDB"
+        }
+    }
+}

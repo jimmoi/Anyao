@@ -1,0 +1,24 @@
+/* styles.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="text"], button {
+    margin-bottom: 10px;
+}
+
+#recommendations img {
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#bookInfo img {
+    width: 200px;
+    height: 300px;
+    margin-top: 20px;
+}

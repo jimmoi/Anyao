@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        /* Navbar styles */
+        .navbar {
+            background-color: #495663;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #66fcf1;
+        }
+        /* Hero section styles */
+        .hero {
+            background-color: #0b0c10;
+            color: #66fcf1;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .hero input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #66fcf1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .hero button:hover {
+            background-color: #45a29e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</div>
+
+<div class="hero">
+    <h1 style="font-size: 100px">Start Your ∞ Read</h1>
+    <p>Discover amazing books and get personalized recommendations!</p>
+    <form action="/recommendations" method="POST">
+        <input type="text" id="book_name" name="book_name" placeholder="Enter the name of the book">
+        <button type="submit">Get Recommendations</button>
+    </form>
+</div>
+
+</body>
+</html>

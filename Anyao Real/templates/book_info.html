@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        /* Navbar styles */
+        .navbar {
+            background-color: #343a40;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #66fcf1;
+        }
+        /* Book info styles */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .book-info {
+            margin-bottom: 20px;
+        }
+        .book-info img {
+            width: 200px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .book-info p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .book-info p span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</div>
+
+<div class="container">
+    <h1>Book Information</h1>
+    <div class="book-info">
+        <img src="{{ callUrlFunction(book_info.name) }}" alt="{{ book_info.name }}">
+        <p><span>Name:</span> {{ book_info.name }}</p>
+        <p><span>Publisher:</span> {{ book_info.publisher }}</p>
+        <p><span>First Publish Year:</span> {{ book_info.first_publish_year }}</p>
+        <p><span>Edition:</span> {{ book_info.edition }}</p>
+        <p><span>Pages:</span> {{ book_info.pages }}</p>
+        <p><span>Rating:</span> {{ book_info.rating }}</p>
+    </div>
+</div>
+
+</body>
+</html>
